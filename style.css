@@ -1,0 +1,63 @@
+body, html {
+    width: 100%;        /* OBLIGATORIO: Hace que ocupe todo el ancho */
+    height: 100%;       /* OBLIGATORIO: Hace que ocupe todo el alto */
+    margin: 0;          /* Quita bordes blancos molestos */
+    padding: 0;
+    
+    /* El fondo bonito */
+    background: radial-gradient(circle at center, #1a2a40 0%, #000000 100%);
+    
+    /* Para centrar el contenido (el texto) justo en medio de la pantalla grande */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Playfair Display', serif;
+    overflow: hidden;   /* Evita que aparezcan barras de desplazamiento */
+}
+.content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre el texto y el botón */
+}
+
+h1 {
+    color: #dbeaff; /* Blanco azulado */
+    font-size: 4rem; /* Texto grande */
+    font-weight: normal;
+    font-style: italic; /* Letra cursiva elegante */
+    margin: 0;
+    /* Efecto de resplandor suave (Glow) */
+    text-shadow: 
+        0 0 10px rgba(0, 191, 255, 0.7),
+        0 0 20px rgba(0, 191, 255, 0.5),
+        0 0 40px rgba(0, 191, 255, 0.3);
+    letter-spacing: 2px;
+}
+
+/* Estilo del botón "píldora" */
+.btn-romantico {
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    border: 1px solid rgba(135, 206, 235, 0.3); /* Borde sutil */
+    padding: 15px 40px;
+    border-radius: 50px; /* Bordes totalmente redondos */
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px); /* Efecto vidrio borroso */
+    
+    /* Sombra suave azulada */
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
+}
+
+.btn-romantico:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.6);
+    transform: scale(1.05); /* Crece un poquito al pasar el mouse */
+}
